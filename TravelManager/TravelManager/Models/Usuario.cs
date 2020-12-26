@@ -1,14 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace TravelManager.Models
 {
     public class Usuario
     { 
 
-        public Usuario(string nomeCompleto, DateTime dataNascimento, string login, string senha, string tipo) 
+        public Usuario(string nomeCompleto, DateTime dataNascimento, string login, string senha, TipoUsuario tipo) 
         {
             this.NomeCompleto = nomeCompleto;
             this.DataNascimento = dataNascimento;
@@ -22,9 +19,9 @@ namespace TravelManager.Models
         public DateTime DataNascimento { get; private set; }
         public string Login { get; private set; }
         public string Senha { get; private set; }
-        public string Tipo { get; private set; }
+        public TipoUsuario Tipo { get; private set; }
 
-        public void Editar(string nomeCompleto, DateTime dataNascimento, string login, string senha, string tipo)
+        public void Editar(string nomeCompleto, DateTime dataNascimento, string login, string senha, TipoUsuario tipo)
         {
             this.NomeCompleto = nomeCompleto;
             this.DataNascimento = dataNascimento;
