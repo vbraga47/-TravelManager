@@ -1,0 +1,32 @@
+﻿@model TravelManager.Models.PacoteTuristico
+
+<h3>@(Model.Id == 0 ? "Novo Pacote Turistico" : "Editar Pacote Turistico")</h3>
+
+<form asp-action="Salvar" method="POST">
+    <input type="hidden" nome="Id" value="@Model.Id" />
+    <div class="form-group">
+        <label for="nome">Nome do Pacote</label>
+        <input type="text" required class="form-control" id="nome" name="nome" placeholder="Digite o nome do Pacote de Turismo" value="@Model.Nome">
+    </div>
+    <div class="form-group">
+        <label for="origem">Local da Origem</label>
+        <input type="text" required class="form-control" id="origem" name="Origem" placeholder="Digite o Local de Origem" value="@Model.Origem">
+    </div>
+    <div class="form-group">
+        <label for="destino">Local de Destino</label>
+        <input type="text" required class="form-control" id="destino" name="Destino" placeholder="Digite o Local de Destino" value="@Model.Destino">
+    </div>
+    <div class="form-group">
+        <label for="atrativos">Atrativos</label>
+        <input type="text" required class="form-control" id="atrativos" name="Atrativos" placeholder="Atrativos" value="@Model.Atrativos">
+    </div>
+    <div class="form-group">
+        <label for="saida">Dia da Saida</label>
+        <input id="saida" required class="form-control" type="date" name="Saida" value="@string.Format("{0:yyyy-MM-dd}", Model.Saida)">
+    </div>
+    <div class="form-group">
+        <label for="retorno">Dia do Retorno</label>
+        <input id="retorno" required class="form-control" type="date" name="Retorno" value="@string.Format("{0:yyyy-MM-dd}", Model.Retorno)">
+    </div>
+    <button type="submit" class="btn btn-dark">Salvar</button>
+</form>

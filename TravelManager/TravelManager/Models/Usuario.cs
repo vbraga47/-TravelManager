@@ -1,9 +1,12 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace TravelManager.Models
 {
     public class Usuario
     { 
+        //Usado pelo Dapper para bindar as consultas
+        public Usuario() { }
 
         public Usuario(string nomeCompleto, DateTime dataNascimento, string login, string senha, TipoUsuario tipo) 
         {
@@ -14,20 +17,22 @@ namespace TravelManager.Models
             this.Tipo = tipo;
         }
 
-        public int Id { get; private set;  }
-        public string NomeCompleto { get; private set; }
-        public DateTime DataNascimento { get; private set; }
-        public string Login { get; private set; }
-        public string Senha { get; private set; }
-        public TipoUsuario Tipo { get; private set; }
+        public int Id { get;  set;  }
+        public string NomeCompleto { get;  set; }
+        public DateTime DataNascimento { get;  set; }
+        public string Login { get;  set; }
+        public string Senha { get;  set; }
+        public TipoUsuario Tipo { get;  set; }
 
-        public void Editar(string nomeCompleto, DateTime dataNascimento, string login, string senha, TipoUsuario tipo)
+    }
+
+    public class ListUsuarios
+    {
+        public ListUsuarios()
         {
-            this.NomeCompleto = nomeCompleto;
-            this.DataNascimento = dataNascimento;
-            this.Login = login;
-            this.Senha = senha;
-            this.Tipo = tipo;
+            Usuarios = new List<Usuario>();
         }
+
+        public List<Usuario> Usuarios { get; set; }
     }
 }

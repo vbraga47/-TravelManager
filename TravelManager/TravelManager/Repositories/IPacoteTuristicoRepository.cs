@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using TravelManager.Models;
 
 namespace TravelManager.Repositories
 {

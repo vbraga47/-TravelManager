@@ -1,0 +1,33 @@
+﻿@model TravelManager.Models.ListUsuarios
+
+<h3>Listagem de Usuários</h3>
+
+<table class="table table-hover table-bordered">
+    <tr>
+        <th>Nome Completo</th>
+        <th>Data de Nasc.</th>
+        <th>Login</th>
+        <th>Tipo</th>
+        <th>Editar</th>
+        <th>Excluir</th>
+    </tr>
+    @foreach (var usuario in Model.Usuarios)
+    {
+        <tr>
+            <td>@usuario.NomeCompleto</td>
+            <td>@string.Format("{0:dd/MM/yyyy}", usuario.DataNascimento)</td>
+            <td>@usuario.Login</td>
+            <td>@usuario.Tipo</td>
+            <td class="text-center"><a class="nav-link text-dark" asp-area="" asp-controller="Usuario" asp-action="Editar" asp-route-id="@usuario.Id">Editar</a></td>
+            <td class="text-center"><a class="nav-link text-dark" asp-area="" asp-controller="Usuario" asp-action="Excluir" asp-route-id="@usuario.Id">Excluir</a></td>
+        </tr>
+    }
+    @if (Model.Usuarios.Count == 0)
+    {
+        <tr>
+            <td class="text-center" colspan="10">Nenhum registro cadastrado</td>
+        </tr>
+    }
+</table>
+
+<a class="btn btn-dark" style="margin-top:15px;"  asp-area="" asp-controller="Usuario" asp-action="NovoUsuario">Novo Usuário</a>

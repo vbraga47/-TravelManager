@@ -3,7 +3,7 @@ using System.Linq;
 using Dapper;
 using TravelManager.Models;
 
-namespace TravelManager.Repositories
+namespace TravelManager.Repositories.Impl
 {
     public class UsuarioRepository : IUsuarioRepository
     {
@@ -31,7 +31,7 @@ namespace TravelManager.Repositories
                                                 data_nascimento = @DataNascimento,
                                                 login = @Login,
                                                 senha = @Senha,
-                                                tipo = @Tipo,
+                                                tipo = @Tipo
                                             WHERE
                                                 id_usuario = @Id;";
 

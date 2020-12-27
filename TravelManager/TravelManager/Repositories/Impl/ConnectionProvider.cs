@@ -1,6 +1,6 @@
 ﻿using MySql.Data.MySqlClient;
 
-namespace TravelManager.Repositories
+namespace TravelManager.Repositories.Impl
 {
     public class ConnectionProvider : IConnectionProvider
     {

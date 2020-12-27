@@ -3,9 +3,9 @@ using System.Linq;
 using Dapper;
 using TravelManager.Models;
 
-namespace TravelManager.Repositories
+namespace TravelManager.Repositories.Impl
 {
-    public class PacoteTuristico : IPacoteTuristicoRepository
+    public class PacoteTuristicoRepository : IPacoteTuristicoRepository
     {
         public static class Queries
         {
@@ -43,8 +43,9 @@ namespace TravelManager.Repositories
 
             public const string DELETE = @"DELETE FROM db_travelmanager.pacote_turistico
                                             WHERE 
-                                                 id_pacote_turistico=0;";
+                                                 id_pacote_turistico = @Id;";
             public const string GET_ALL = @"SELECT
+                                                id_pacote_turistico AS Id,
                                                 nome AS Nome,
                                                 origem AS Origem,
                                                 destino AS Destino,
@@ -54,27 +55,27 @@ namespace TravelManager.Repositories
                                                 cod_usuario_criacao AS CodUsuarioCriacao 
                                             FROM
                                                 db_travelmanager.pacote_turistico ";
-            public const string GET_BY_ID = GET_ALL + @"WHERE id_pacoteTuristico= @Id";
+            public const string GET_BY_ID = GET_ALL + @"WHERE id_pacote_turistico= @Id";
         }
 
 
         private IConnectionProvider _connectionProvider;
 
-        public PacoteTuristico(IConnectionProvider connectionProvider)
+        public PacoteTuristicoRepository(IConnectionProvider connectionProvider)
         {
             _connectionProvider = connectionProvider;
         }
 
         public int Create(PacoteTuristico pacoteTuristico)
         {
-            var novoIdUsuario = 0;
+            var novoIdPacote = 0;
             using (var conn = _connectionProvider.GetConnection())
             {
                 conn.Open();
-                novoIdUsuario = conn.Query<int>(Queries.CREATE, pacoteTuristico).FirstOrDefault();
+                novoIdPacote = conn.Query<int>(Queries.CREATE, pacoteTuristico).FirstOrDefault();
             }
 
-            return novoIdUsuario;
+            return novoIdPacote;
         }
 
         public void Delete(int id)

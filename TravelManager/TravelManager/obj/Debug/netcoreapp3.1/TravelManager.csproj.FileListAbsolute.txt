@@ -22,10 +22,7 @@ D:\-TravelManager\TravelManager\TravelManager\obj\Debug\netcoreapp3.1\TravelMana
 D:\-TravelManager\TravelManager\TravelManager\obj\Debug\netcoreapp3.1\TravelManager.TagHelpers.output.cache
 D:\-TravelManager\TravelManager\TravelManager\obj\Debug\netcoreapp3.1\TravelManager.RazorCoreGenerate.cache
 D:\-TravelManager\TravelManager\TravelManager\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
-D:\-TravelManager\TravelManager\TravelManager\obj\Debug\netcoreapp3.1\Razor\Views\Home\Privacy.cshtml.g.cs
-D:\-TravelManager\TravelManager\TravelManager\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
 D:\-TravelManager\TravelManager\TravelManager\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
-D:\-TravelManager\TravelManager\TravelManager\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
 D:\-TravelManager\TravelManager\TravelManager\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
 D:\-TravelManager\TravelManager\TravelManager\obj\Debug\netcoreapp3.1\Razor\Views\_ViewStart.cshtml.g.cs
 D:\-TravelManager\TravelManager\TravelManager\obj\Debug\netcoreapp3.1\TravelManager.RazorTargetAssemblyInfo.cache
@@ -50,3 +47,8 @@ D:\-TravelManager\TravelManager\TravelManager\bin\Debug\netcoreapp3.1\System.Con
 D:\-TravelManager\TravelManager\TravelManager\bin\Debug\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
 D:\-TravelManager\TravelManager\TravelManager\bin\Debug\netcoreapp3.1\System.Xml.XPath.XmlDocument.dll
 D:\-TravelManager\TravelManager\TravelManager\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+D:\-TravelManager\TravelManager\TravelManager\obj\Debug\netcoreapp3.1\Razor\Views\PacoteTuristico\Index.cshtml.g.cs
+D:\-TravelManager\TravelManager\TravelManager\obj\Debug\netcoreapp3.1\Razor\Views\Usuario\Index.cshtml.g.cs
+D:\-TravelManager\TravelManager\TravelManager\obj\Debug\netcoreapp3.1\Razor\Views\Vitrine\Index.cshtml.g.cs
+D:\-TravelManager\TravelManager\TravelManager\obj\Debug\netcoreapp3.1\Razor\Views\Usuario\Editar.cshtml.g.cs
+D:\-TravelManager\TravelManager\TravelManager\obj\Debug\netcoreapp3.1\Razor\Views\PacoteTuristico\Editar.cshtml.g.cs

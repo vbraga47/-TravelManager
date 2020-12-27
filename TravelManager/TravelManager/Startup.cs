@@ -3,11 +3,10 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using TravelManager.Repositories;
+using TravelManager.Repositories.Impl;
+using TravelManager.Services;
+using TravelManager.Services.Impl;
 
 namespace TravelManager
 {
@@ -27,7 +26,9 @@ namespace TravelManager
 
             services.AddSingleton<IConnectionProvider>(new ConnectionProvider(connectiString));
             services.AddTransient<IUsuarioRepository, UsuarioRepository>();
-
+            services.AddTransient<IPacoteTuristicoRepository, PacoteTuristicoRepository>();
+            services.AddTransient<ICadastroUsuarioServices, CadastroUsuarioServices>();
+            services.AddTransient<ICadastroPacoteTuristicoServices, CadastroPacoteTuristicoServices>();
 
             services.AddControllersWithViews();
         }
